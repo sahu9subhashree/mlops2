@@ -6,9 +6,9 @@ import urllib
 
 host_server = os.environ.get('host_server', 'localhost')
 db_server_port = urllib.parse.quote_plus(str(os.environ.get('db_server_port', '3306')))
-database_name = os.environ.get('database_name', 'fishdb')
-db_username = urllib.parse.quote_plus(str(os.environ.get('db_username', 'Server admin login name')))
-db_password = urllib.parse.quote_plus(str(os.environ.get('db_password', 'password')))
+database_name = os.environ.get('database_name', 'fishnew_db')
+db_username = urllib.parse.quote_plus(str(os.environ.get('db_username', 'root')))
+db_password = urllib.parse.quote_plus(str(os.environ.get('db_password', 'qwerty123')))
 SQLALCHEMY_DATABASE_URL='mysql+mysqlconnector://{}:{}@{}:{}/{}'.format(db_username,db_password,host_server,db_server_port,database_name)
 
 #SQLALCHEMY_DATABASE_URL = "sqlite:///./product.db"
