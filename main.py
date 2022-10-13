@@ -5,14 +5,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from pydantic import BaseModel
-from Database import models
-from Database.database import engine 
 
-
-models.Base.metadata.create_all(engine)
-
-
-from Database.database import SessionLocal
 
 app=FastAPI()
 @app.get('/')
