@@ -26,7 +26,7 @@ pipeline {
             }
             stage('Run Docker Image And Expose API'){
                 steps {
-                sh "docker run -d -p 8008:8008 --name subhashree_v3.0"
+                sh "docker run -d -p 8008:8008 subhashree_v3.0"
                 }
             }
             stage("Testing Application"){
